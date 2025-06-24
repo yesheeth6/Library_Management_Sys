@@ -59,9 +59,9 @@ library.addBook("C++ Programming", "Bjarne Stroustrup", "Programming", "1234", 5
 # Add a User:
 Add a student named "Alice":
 library.addUser(new Student("Alice", "S1"));
-Borrow a Book:
+# Borrow a Book:
 Alice borrows the book with ISBN 1234:
 library.borrowBook("S1", "1234");
 # View Analytics:
-# Display top borrowed books:
+Display top borrowed books:
 library.displayAnalytics();
