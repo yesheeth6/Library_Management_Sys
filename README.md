@@ -41,27 +41,27 @@ Use any C++ compiler like g++:
 g++ library_management.cpp -o library_management
 ## Run the Program
 ./library_management
-## 📚 How to Use
-# Add books to the library:
+# 📚 How to Use
+## Add books to the library:
 Specify book details (title, author, genre, ISBN, copies).
-# Register users:
+## Register users:
 Add a student or staff member by providing their name and ID.
-# Borrow and return books:
+## Borrow and return books:
 Borrow books based on availability and user type limits.
 Return books to free up copies and notify waitlisted users.
-# View recommendations and analytics:
+## View recommendations and analytics:
 Get book recommendations personalized to user preferences.
 Analyze borrowing trends and popular genres.
-##📝 Example Commands
-# Add a Book:
+#📝 Example Commands
+## Add a Book:
 Add "C++ Programming" with 5 copies:
 library.addBook("C++ Programming", "Bjarne Stroustrup", "Programming", "1234", 5);
-# Add a User:
+### Add a User:
 Add a student named "Alice":
 library.addUser(new Student("Alice", "S1"));
-# Borrow a Book:
+## Borrow a Book:
 Alice borrows the book with ISBN 1234:
 library.borrowBook("S1", "1234");
-# View Analytics:
+## View Analytics:
 Display top borrowed books:
 library.displayAnalytics();
