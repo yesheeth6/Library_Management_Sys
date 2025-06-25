@@ -1,212 +1,201 @@
 #include <iostream>
-#include <map>
-#include <vector>
-#include <queue>
+#include <sqlite3.h>
 #include <string>
+#include <vector>
 #include <algorithm>
-#include <set>
+#include <map>
+#include <queue>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
 // ================================
-// Book Class with Analytics
+// SQLite Database Setup
 // ================================
-class Book {
-public:
-    string title, author, genre, ISBN;
-    int availableCopies, borrowedCount;
-    queue<string> waitlist;
+sqlite3* db = nullptr;
 
-    // Default constructor
-    Book() : title(""), author(""), genre(""), ISBN(""), availableCopies(0), borrowedCount(0) {}
-
-    // Parameterized constructor
-    Book(string t, string a, string g, string isbn, int copies)
-        : title(t), author(a), genre(g), ISBN(isbn), availableCopies(copies), borrowedCount(0) {}
-
-    // Display book information
-    void displayBookInfo() {
-        cout << "Title: " << title << ", Author: " << author
-             << ", Genre: " << genre << ", ISBN: " << ISBN
-             << ", Available Copies: " << availableCopies
-             << ", Times Borrowed: " << borrowedCount << endl;
+void openDatabase() {
+    int rc = sqlite3_open("library.db", &db);
+    if (rc) {
+        cerr << "Error opening database: " << sqlite3_errmsg(db) << endl;
+        exit(1);
     }
-};
+    cout << "Database opened successfully.\n";
+}
 
-// ================================
-// User Base Class with Borrowing Analytics
-// ================================
-class User {
-public:
-    string name, userID;
-    vector<string> borrowedBooks;
-    map<string, int> genrePreference;
+void closeDatabase() {
+    if (db) {
+        sqlite3_close(db);
+        db = nullptr;
+        cout << "Database closed successfully.\n";
+    }
+}
 
-    // Constructor
-    User(string n, string id) : name(n), userID(id) {}
+void createTables() {
+    const string createBooksTable = 
+        "CREATE TABLE IF NOT EXISTS Books ("
+        "ISBN TEXT PRIMARY KEY, "
+        "Title TEXT, "
+        "Author TEXT, "
+        "Genre TEXT, "
+        "AvailableCopies INTEGER, "
+        "BorrowedCount INTEGER DEFAULT 0);";
 
-    // Virtual function for borrowing limit (to be overridden by derived classes)
-    virtual int borrowingLimit() = 0;
+    const string createUsersTable =
+        "CREATE TABLE IF NOT EXISTS Users ("
+        "UserID TEXT PRIMARY KEY, "
+        "Name TEXT, "
+        "UserType TEXT);";
 
-    // Borrow a book and update genre preference
-    void borrowBook(string isbn, string genre) {
-        borrowedBooks.push_back(isbn);
-        genrePreference[genre]++;
+    const string createTransactionsTable =
+        "CREATE TABLE IF NOT EXISTS Transactions ("
+        "TransactionID INTEGER PRIMARY KEY AUTOINCREMENT, "
+        "UserID TEXT, "
+        "ISBN TEXT, "
+        "Action TEXT, "
+        "Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, "
+        "FOREIGN KEY(UserID) REFERENCES Users(UserID), "
+        "FOREIGN KEY(ISBN) REFERENCES Books(ISBN));";
+
+    char* errorMessage;
+
+    if (sqlite3_exec(db, createBooksTable.c_str(), nullptr, nullptr, &errorMessage) != SQLITE_OK) {
+        cerr << "Error creating Books table: " << errorMessage << endl;
+        sqlite3_free(errorMessage);
     }
 
-    // Return a book
-    void returnBook(string isbn) {
-        auto it = find(borrowedBooks.begin(), borrowedBooks.end(), isbn);
-        if (it != borrowedBooks.end()) borrowedBooks.erase(it);
+    if (sqlite3_exec(db, createUsersTable.c_str(), nullptr, nullptr, &errorMessage) != SQLITE_OK) {
+        cerr << "Error creating Users table: " << errorMessage << endl;
+        sqlite3_free(errorMessage);
     }
-};
+
+    if (sqlite3_exec(db, createTransactionsTable.c_str(), nullptr, nullptr, &errorMessage) != SQLITE_OK) {
+        cerr << "Error creating Transactions table: " << errorMessage << endl;
+        sqlite3_free(errorMessage);
+    }
+
+    cout << "Tables created successfully.\n";
+}
 
 // ================================
-// Derived Classes for User Types
-// ================================
-class Student : public User {
-public:
-    Student(string n, string id) : User(n, id) {}
-    int borrowingLimit() override { return 5; } // Students can borrow up to 5 books
-};
-
-class Staff : public User {
-public:
-    Staff(string n, string id) : User(n, id) {}
-    int borrowingLimit() override { return 10; } // Staff can borrow up to 10 books
-};
-
-// ================================
-// Library Class with Enhanced Features
+// Library Class
 // ================================
 class Library {
-private:
-    map<string, Book> books;      // Map of books, key: ISBN
-    map<string, User*> users;    // Map of users, key: User ID
-
 public:
-    // Add a new book to the library
-    void addBook(string title, string author, string genre, string isbn, int copies) {
-        books[isbn] = Book(title, author, genre, isbn, copies);
-    }
-
-    // Add a new user to the library system
-    void addUser(User* user) {
-        users[user->userID] = user;
-    }
-
-    // Borrow a book
-    void borrowBook(string userID, string isbn) {
-        if (books.find(isbn) == books.end()) {
-            cout << "Book not found.\n";
-            return;
-        }
-        Book &book = books[isbn];
-        User *user = users[userID];
-
-        // Check if the book is available and user has not reached the borrowing limit
-        if (book.availableCopies > 0 && user->borrowedBooks.size() < user->borrowingLimit()) {
-            book.availableCopies--;
-            book.borrowedCount++;
-            user->borrowBook(isbn, book.genre);
-            cout << "Book borrowed successfully.\n";
-        } else if (book.availableCopies == 0) {
-            cout << "Book not available. Adding to waitlist.\n";
-            book.waitlist.push(userID);
-        } else {
-            cout << "Borrowing limit reached.\n";
-        }
-    }
-
-    // Return a book
-    void returnBook(string userID, string isbn) {
-        if (books.find(isbn) == books.end()) {
-            cout << "Book not found.\n";
-            return;
-        }
-        Book &book = books[isbn];
-        User *user = users[userID];
-
-        user->returnBook(isbn);
-        book.availableCopies++;
-
-        // Notify the next user in the waitlist if the book becomes available
-        if (!book.waitlist.empty()) {
-            string nextUser = book.waitlist.front();
-            book.waitlist.pop();
-            cout << "Notifying " << nextUser << " for the available book.\n";
-        }
-    }
-
-    // Recommend books to a user based on preferences and popularity
-    void recommendBooks(string userID) {
-        User *user = users[userID];
-        cout << "Recommended Books for " << user->name << ":\n";
-
-        vector<pair<string, int>> recommendations;
-        for (auto &[isbn, book] : books) {
-            int score = user->genrePreference[book.genre] + book.borrowedCount;
-            recommendations.push_back({isbn, score});
-        }
-
-        // Sort recommendations by score
-        sort(recommendations.begin(), recommendations.end(),
-             [](auto &a, auto &b) { return a.second > b.second; });
-
-        // Display recommended books
-        for (auto &[isbn, _] : recommendations) {
-            books[isbn].displayBookInfo();
-        }
-    }
-
-    // Display analytics such as the top borrowed books
-    void displayAnalytics() {
-        cout << "\n=== Library Analytics ===\n";
-        cout << "Top 5 Most Borrowed Books:\n";
-
-        vector<pair<string, int>> bookStats;
-        for (auto &[isbn, book] : books) {
-            bookStats.push_back({isbn, book.borrowedCount});
-        }
-
-        // Sort by borrowing count
-        sort(bookStats.begin(), bookStats.end(),
-             [](auto &a, auto &b) { return a.second > b.second; });
-
-        for (int i = 0; i < min(5, (int)bookStats.size()); i++) {
-            books[bookStats[i].first].displayBookInfo();
-        }
-    }
+    void addBook(const string& title, const string& author, const string& genre, const string& isbn, int copies);
+    void addUser(const string& name, const string& userID, const string& userType);
+    void borrowBook(const string& userID, const string& isbn);
+    void displayBooks();
+    void addBooksFromCSV(const string& filePath);
 };
 
+void Library::addBook(const string& title, const string& author, const string& genre, const string& isbn, int copies) {
+    const string sql = "INSERT INTO Books (ISBN, Title, Author, Genre, AvailableCopies) VALUES (?, ?, ?, ?, ?);";
+    sqlite3_stmt* stmt = nullptr;
+
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
+        sqlite3_bind_text(stmt, 1, isbn.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_text(stmt, 2, title.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_text(stmt, 3, author.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_text(stmt, 4, genre.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_int(stmt, 5, copies);
+
+        if (sqlite3_step(stmt) == SQLITE_DONE) {
+            cout << "Book added successfully.\n";
+        } else {
+            cerr << "Error adding book: " << sqlite3_errmsg(db) << endl;
+        }
+        sqlite3_finalize(stmt);
+    } else {
+        cerr << "Error preparing SQL statement: " << sqlite3_errmsg(db) << endl;
+    }
+}
+
+void Library::addBooksFromCSV(const string& filePath) {
+    ifstream file(filePath);
+    if (!file.is_open()) {
+        cerr << "Error: Could not open file " << filePath << endl;
+        return;
+    }
+
+    string line;
+    getline(file, line); // Skip the header line
+
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string title, author, genre, isbn, copiesStr;
+        int copies;
+
+        getline(ss, title, ',');
+        getline(ss, author, ',');
+        getline(ss, genre, ',');
+        getline(ss, isbn, ',');
+        getline(ss, copiesStr, ',');
+
+        // Trim whitespace
+        title.erase(remove_if(title.begin(), title.end(), ::isspace), title.end());
+        author.erase(remove_if(author.begin(), author.end(), ::isspace), author.end());
+        genre.erase(remove_if(genre.begin(), genre.end(), ::isspace), genre.end());
+        isbn.erase(remove_if(isbn.begin(), isbn.end(), ::isspace), isbn.end());
+
+        try {
+            copies = stoi(copiesStr);
+            addBook(title, author, genre, isbn, copies);
+        } catch (const exception& e) {
+            cerr << "Error processing line: " << line << " (" << e.what() << ")\n";
+        }
+    }
+
+    file.close();
+    cout << "Books added to the database from " << filePath << endl;
+}
+
+void Library::displayBooks() {
+    const string sql = "SELECT * FROM Books;";
+    sqlite3_stmt* stmt = nullptr;
+
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
+        cout << "\n=== Available Books ===\n";
+        while (sqlite3_step(stmt) == SQLITE_ROW) {
+            string isbn = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+            string title = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+            string author = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+            string genre = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3));
+            int availableCopies = sqlite3_column_int(stmt, 4);
+            int borrowedCount = sqlite3_column_int(stmt, 5);
+
+            cout << "ISBN: " << isbn << ", Title: " << title
+                 << ", Author: " << author << ", Genre: " << genre
+                 << ", Available Copies: " << availableCopies
+                 << ", Times Borrowed: " << borrowedCount << endl;
+        }
+        sqlite3_finalize(stmt);
+    } else {
+        cerr << "Error querying books: " << sqlite3_errmsg(db) << endl;
+    }
+}
+
 // ================================
-// Main Function for User Interaction
+// Main Function
 // ================================
 int main() {
     Library library;
 
-    // Adding Books
-    library.addBook("C++ Programming", "Bjarne Stroustrup", "Programming", "1234", 5);
-    library.addBook("Clean Code", "Robert C. Martin", "Software Engineering", "5678", 2);
-    library.addBook("Introduction to Algorithms", "Thomas H. Cormen", "Algorithms", "91011", 3);
+    // Open database connection
+    openDatabase();
 
-    // Adding Users
-    library.addUser(new Student("Alice", "S1"));
-    library.addUser(new Staff("Bob", "T1"));
+    // Create tables if they don't exist
+    createTables();
 
-    // Borrowing Books
-    library.borrowBook("S1", "1234");
-    library.borrowBook("S1", "5678");
-    library.borrowBook("T1", "91011");
+    // Add books from the CSV file
+    library.addBooksFromCSV("large_library_dataset.csv");
 
-    // Returning Books
-    library.returnBook("S1", "1234");
+    // Display all books
+    library.displayBooks();
 
-    // Recommendations
-    library.recommendBooks("S1");
-
-    // Analytics
-    library.displayAnalytics();
+    // Close the database connection
+    closeDatabase();
 
     return 0;
 }
