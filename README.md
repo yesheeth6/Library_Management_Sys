@@ -73,3 +73,24 @@ Add a feature for book return and fine calculation.
 Enhance user authentication with login support.
 Implement a graphical user interface (GUI).
 Provide advanced search and filter options for books.
+# Test Library Management Database
+
+This `test.cpp` file is designed to test the basic functionality of the SQLite database used in the Library Management System. It ensures that the database operations, such as creating tables, inserting records, querying data, and deleting records, are working as intended.
+
+## Features Tested
+1. **Database Connection**: Establishes a connection with the SQLite database file `library.db`.
+2. **Table Creation**: Creates the `Books` table if it does not already exist.
+3. **Data Insertion**: Inserts a sample book record into the `Books` table.
+4. **Data Querying**: Fetches and displays all records from the `Books` table.
+5. **Data Deletion**: Deletes the sample book record from the `Books` table.
+6. **Verification**: Re-queries the `Books` table to confirm the deletion.
+
+## How to Use
+1. Save `test.cpp` in the project directory.
+2. Compile the file with the following command:
+   ```bash
+   g++ -o test test.cpp -lsqlite3
+## Execute the program
+   ./test
+   ![image](https://github.com/user-attachments/assets/318ed281-b6be-4fec-ac79-e40438a3151a)
+
