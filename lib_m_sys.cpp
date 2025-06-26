@@ -91,26 +91,53 @@ public:
 };
 
 void Library::addBook(const string& title, const string& author, const string& genre, const string& isbn, int copies) {
-    const string sql = "INSERT INTO Books (ISBN, Title, Author, Genre, AvailableCopies) VALUES (?, ?, ?, ?, ?);";
-    sqlite3_stmt* stmt = nullptr;
+    // Check if the book already exists
+    const string checkSql = "SELECT COUNT(*) FROM Books WHERE ISBN = ?;";
+    sqlite3_stmt* checkStmt = nullptr;
 
-    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
-        sqlite3_bind_text(stmt, 1, isbn.c_str(), -1, SQLITE_STATIC);
-        sqlite3_bind_text(stmt, 2, title.c_str(), -1, SQLITE_STATIC);
-        sqlite3_bind_text(stmt, 3, author.c_str(), -1, SQLITE_STATIC);
-        sqlite3_bind_text(stmt, 4, genre.c_str(), -1, SQLITE_STATIC);
-        sqlite3_bind_int(stmt, 5, copies);
+    if (sqlite3_prepare_v2(db, checkSql.c_str(), -1, &checkStmt, nullptr) == SQLITE_OK) {
+        sqlite3_bind_text(checkStmt, 1, isbn.c_str(), -1, SQLITE_STATIC);
 
-        if (sqlite3_step(stmt) == SQLITE_DONE) {
+        if (sqlite3_step(checkStmt) == SQLITE_ROW) {
+            int count = sqlite3_column_int(checkStmt, 0);
+            sqlite3_finalize(checkStmt);
+
+            if (count > 0) {
+                cout << "Book with ISBN " << isbn << " already exists. Skipping insertion.\n";
+                return;
+            }
+        } else {
+            cerr << "Error checking book existence: " << sqlite3_errmsg(db) << endl;
+            sqlite3_finalize(checkStmt);
+            return;
+        }
+    } else {
+        cerr << "Error preparing check statement: " << sqlite3_errmsg(db) << endl;
+        return;
+    }
+
+    // Insert the new book
+    const string insertSql = "INSERT INTO Books (ISBN, Title, Author, Genre, AvailableCopies) VALUES (?, ?, ?, ?, ?);";
+    sqlite3_stmt* insertStmt = nullptr;
+
+    if (sqlite3_prepare_v2(db, insertSql.c_str(), -1, &insertStmt, nullptr) == SQLITE_OK) {
+        sqlite3_bind_text(insertStmt, 1, isbn.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_text(insertStmt, 2, title.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_text(insertStmt, 3, author.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_text(insertStmt, 4, genre.c_str(), -1, SQLITE_STATIC);
+        sqlite3_bind_int(insertStmt, 5, copies);
+
+        if (sqlite3_step(insertStmt) == SQLITE_DONE) {
             cout << "Book added successfully.\n";
         } else {
             cerr << "Error adding book: " << sqlite3_errmsg(db) << endl;
         }
-        sqlite3_finalize(stmt);
+        sqlite3_finalize(insertStmt);
     } else {
-        cerr << "Error preparing SQL statement: " << sqlite3_errmsg(db) << endl;
+        cerr << "Error preparing insert statement: " << sqlite3_errmsg(db) << endl;
     }
 }
+
 
 void Library::addBooksFromCSV(const string& filePath) {
     ifstream file(filePath);

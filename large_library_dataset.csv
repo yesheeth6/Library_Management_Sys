@@ -1,100 +1,501 @@
-Title,Author,Genre,ISBN,Copies
-The Great Gatsby,F. Scott Fitzgerald,Fiction,1001,5
-To Kill a Mockingbird,Harper Lee,Fiction,1002,3
-1984,George Orwell,Dystopian,1003,4
-Pride and Prejudice,Jane Austen,Romance,1004,6
-Moby Dick,Herman Melville,Adventure,1005,2
-War and Peace,Leo Tolstoy,Historical,1006,1
-The Odyssey,Homer,Classic,1007,5
-Ulysses,James Joyce,Modernist,1008,2
-The Divine Comedy,Dante Alighieri,Epic Poetry,1009,3
-Crime and Punishment,Fyodor Dostoevsky,Philosophical,1010,4
-Book Title 1011,Author 1011,Genre Placeholder,1011,2
-Book Title 1012,Author 1012,Genre Placeholder,1012,3
-Book Title 1013,Author 1013,Genre Placeholder,1013,4
-Book Title 1014,Author 1014,Genre Placeholder,1014,5
-Book Title 1015,Author 1015,Genre Placeholder,1015,1
-Book Title 1016,Author 1016,Genre Placeholder,1016,2
-Book Title 1017,Author 1017,Genre Placeholder,1017,3
-Book Title 1018,Author 1018,Genre Placeholder,1018,4
-Book Title 1019,Author 1019,Genre Placeholder,1019,5
-Book Title 1020,Author 1020,Genre Placeholder,1020,1
-Book Title 1021,Author 1021,Genre Placeholder,1021,2
-Book Title 1022,Author 1022,Genre Placeholder,1022,3
-Book Title 1023,Author 1023,Genre Placeholder,1023,4
-Book Title 1024,Author 1024,Genre Placeholder,1024,5
-Book Title 1025,Author 1025,Genre Placeholder,1025,1
-Book Title 1026,Author 1026,Genre Placeholder,1026,2
-Book Title 1027,Author 1027,Genre Placeholder,1027,3
-Book Title 1028,Author 1028,Genre Placeholder,1028,4
-Book Title 1029,Author 1029,Genre Placeholder,1029,5
-Book Title 1030,Author 1030,Genre Placeholder,1030,1
-Book Title 1031,Author 1031,Genre Placeholder,1031,2
-Book Title 1032,Author 1032,Genre Placeholder,1032,3
-Book Title 1033,Author 1033,Genre Placeholder,1033,4
-Book Title 1034,Author 1034,Genre Placeholder,1034,5
-Book Title 1035,Author 1035,Genre Placeholder,1035,1
-Book Title 1036,Author 1036,Genre Placeholder,1036,2
-Book Title 1037,Author 1037,Genre Placeholder,1037,3
-Book Title 1038,Author 1038,Genre Placeholder,1038,4
-Book Title 1039,Author 1039,Genre Placeholder,1039,5
-Book Title 1040,Author 1040,Genre Placeholder,1040,1
-Book Title 1041,Author 1041,Genre Placeholder,1041,2
-Book Title 1042,Author 1042,Genre Placeholder,1042,3
-Book Title 1043,Author 1043,Genre Placeholder,1043,4
-Book Title 1044,Author 1044,Genre Placeholder,1044,5
-Book Title 1045,Author 1045,Genre Placeholder,1045,1
-Book Title 1046,Author 1046,Genre Placeholder,1046,2
-Book Title 1047,Author 1047,Genre Placeholder,1047,3
-Book Title 1048,Author 1048,Genre Placeholder,1048,4
-Book Title 1049,Author 1049,Genre Placeholder,1049,5
-Book Title 1050,Author 1050,Genre Placeholder,1050,1
-Book Title 1051,Author 1051,Genre Placeholder,1051,2
-Book Title 1052,Author 1052,Genre Placeholder,1052,3
-Book Title 1053,Author 1053,Genre Placeholder,1053,4
-Book Title 1054,Author 1054,Genre Placeholder,1054,5
-Book Title 1055,Author 1055,Genre Placeholder,1055,1
-Book Title 1056,Author 1056,Genre Placeholder,1056,2
-Book Title 1057,Author 1057,Genre Placeholder,1057,3
-Book Title 1058,Author 1058,Genre Placeholder,1058,4
-Book Title 1059,Author 1059,Genre Placeholder,1059,5
-Book Title 1060,Author 1060,Genre Placeholder,1060,1
-Book Title 1061,Author 1061,Genre Placeholder,1061,2
-Book Title 1062,Author 1062,Genre Placeholder,1062,3
-Book Title 1063,Author 1063,Genre Placeholder,1063,4
-Book Title 1064,Author 1064,Genre Placeholder,1064,5
-Book Title 1065,Author 1065,Genre Placeholder,1065,1
-Book Title 1066,Author 1066,Genre Placeholder,1066,2
-Book Title 1067,Author 1067,Genre Placeholder,1067,3
-Book Title 1068,Author 1068,Genre Placeholder,1068,4
-Book Title 1069,Author 1069,Genre Placeholder,1069,5
-Book Title 1070,Author 1070,Genre Placeholder,1070,1
-Book Title 1071,Author 1071,Genre Placeholder,1071,2
-Book Title 1072,Author 1072,Genre Placeholder,1072,3
-Book Title 1073,Author 1073,Genre Placeholder,1073,4
-Book Title 1074,Author 1074,Genre Placeholder,1074,5
-Book Title 1075,Author 1075,Genre Placeholder,1075,1
-Book Title 1076,Author 1076,Genre Placeholder,1076,2
-Book Title 1077,Author 1077,Genre Placeholder,1077,3
-Book Title 1078,Author 1078,Genre Placeholder,1078,4
-Book Title 1079,Author 1079,Genre Placeholder,1079,5
-Book Title 1080,Author 1080,Genre Placeholder,1080,1
-Book Title 1081,Author 1081,Genre Placeholder,1081,2
-Book Title 1082,Author 1082,Genre Placeholder,1082,3
-Book Title 1083,Author 1083,Genre Placeholder,1083,4
-Book Title 1084,Author 1084,Genre Placeholder,1084,5
-Book Title 1085,Author 1085,Genre Placeholder,1085,1
-Book Title 1086,Author 1086,Genre Placeholder,1086,2
-Book Title 1087,Author 1087,Genre Placeholder,1087,3
-Book Title 1088,Author 1088,Genre Placeholder,1088,4
-Book Title 1089,Author 1089,Genre Placeholder,1089,5
-Book Title 1090,Author 1090,Genre Placeholder,1090,1
-Book Title 1091,Author 1091,Genre Placeholder,1091,2
-Book Title 1092,Author 1092,Genre Placeholder,1092,3
-Book Title 1093,Author 1093,Genre Placeholder,1093,4
-Book Title 1094,Author 1094,Genre Placeholder,1094,5
-Book Title 1095,Author 1095,Genre Placeholder,1095,1
-Book Title 1096,Author 1096,Genre Placeholder,1096,2
-Book Title 1097,Author 1097,Genre Placeholder,1097,3
-Book Title 1098,Author 1098,Genre Placeholder,1098,4
-Book Title 1099,Author 1099,Genre Placeholder,1099,5
+ISBN,Title,Author,Genre,AvailableCopies,TimesBorrowed
+1000,BookTitle0,Author0,Genre0,5,0
+1001,BookTitle1,Author1,Genre1,4,1
+1002,BookTitle2,Author2,Genre2,3,2
+1003,BookTitle3,Author3,Genre3,2,0
+1004,BookTitle4,Author4,Genre4,1,1
+1005,BookTitle5,Author5,Genre5,5,2
+1006,BookTitle6,Author6,Genre6,4,0
+1007,BookTitle7,Author7,Genre7,3,1
+1008,BookTitle8,Author8,Genre8,2,2
+1009,BookTitle9,Author9,Genre9,1,0
+1010,BookTitle10,Author10,Genre0,5,1
+1011,BookTitle11,Author11,Genre1,4,2
+1012,BookTitle12,Author12,Genre2,3,0
+1013,BookTitle13,Author13,Genre3,2,1
+1014,BookTitle14,Author14,Genre4,1,2
+1015,BookTitle15,Author15,Genre5,5,0
+1016,BookTitle16,Author16,Genre6,4,1
+1017,BookTitle17,Author17,Genre7,3,2
+1018,BookTitle18,Author18,Genre8,2,0
+1019,BookTitle19,Author19,Genre9,1,1
+1020,BookTitle20,Author20,Genre0,5,2
+1021,BookTitle21,Author21,Genre1,4,0
+1022,BookTitle22,Author22,Genre2,3,1
+1023,BookTitle23,Author23,Genre3,2,2
+1024,BookTitle24,Author24,Genre4,1,0
+1025,BookTitle25,Author25,Genre5,5,1
+1026,BookTitle26,Author26,Genre6,4,2
+1027,BookTitle27,Author27,Genre7,3,0
+1028,BookTitle28,Author28,Genre8,2,1
+1029,BookTitle29,Author29,Genre9,1,2
+1030,BookTitle30,Author30,Genre0,5,0
+1031,BookTitle31,Author31,Genre1,4,1
+1032,BookTitle32,Author32,Genre2,3,2
+1033,BookTitle33,Author33,Genre3,2,0
+1034,BookTitle34,Author34,Genre4,1,1
+1035,BookTitle35,Author35,Genre5,5,2
+1036,BookTitle36,Author36,Genre6,4,0
+1037,BookTitle37,Author37,Genre7,3,1
+1038,BookTitle38,Author38,Genre8,2,2
+1039,BookTitle39,Author39,Genre9,1,0
+1040,BookTitle40,Author40,Genre0,5,1
+1041,BookTitle41,Author41,Genre1,4,2
+1042,BookTitle42,Author42,Genre2,3,0
+1043,BookTitle43,Author43,Genre3,2,1
+1044,BookTitle44,Author44,Genre4,1,2
+1045,BookTitle45,Author45,Genre5,5,0
+1046,BookTitle46,Author46,Genre6,4,1
+1047,BookTitle47,Author47,Genre7,3,2
+1048,BookTitle48,Author48,Genre8,2,0
+1049,BookTitle49,Author49,Genre9,1,1
+1050,BookTitle50,Author50,Genre0,5,2
+1051,BookTitle51,Author51,Genre1,4,0
+1052,BookTitle52,Author52,Genre2,3,1
+1053,BookTitle53,Author53,Genre3,2,2
+1054,BookTitle54,Author54,Genre4,1,0
+1055,BookTitle55,Author55,Genre5,5,1
+1056,BookTitle56,Author56,Genre6,4,2
+1057,BookTitle57,Author57,Genre7,3,0
+1058,BookTitle58,Author58,Genre8,2,1
+1059,BookTitle59,Author59,Genre9,1,2
+1060,BookTitle60,Author60,Genre0,5,0
+1061,BookTitle61,Author61,Genre1,4,1
+1062,BookTitle62,Author62,Genre2,3,2
+1063,BookTitle63,Author63,Genre3,2,0
+1064,BookTitle64,Author64,Genre4,1,1
+1065,BookTitle65,Author65,Genre5,5,2
+1066,BookTitle66,Author66,Genre6,4,0
+1067,BookTitle67,Author67,Genre7,3,1
+1068,BookTitle68,Author68,Genre8,2,2
+1069,BookTitle69,Author69,Genre9,1,0
+1070,BookTitle70,Author70,Genre0,5,1
+1071,BookTitle71,Author71,Genre1,4,2
+1072,BookTitle72,Author72,Genre2,3,0
+1073,BookTitle73,Author73,Genre3,2,1
+1074,BookTitle74,Author74,Genre4,1,2
+1075,BookTitle75,Author75,Genre5,5,0
+1076,BookTitle76,Author76,Genre6,4,1
+1077,BookTitle77,Author77,Genre7,3,2
+1078,BookTitle78,Author78,Genre8,2,0
+1079,BookTitle79,Author79,Genre9,1,1
+1080,BookTitle80,Author80,Genre0,5,2
+1081,BookTitle81,Author81,Genre1,4,0
+1082,BookTitle82,Author82,Genre2,3,1
+1083,BookTitle83,Author83,Genre3,2,2
+1084,BookTitle84,Author84,Genre4,1,0
+1085,BookTitle85,Author85,Genre5,5,1
+1086,BookTitle86,Author86,Genre6,4,2
+1087,BookTitle87,Author87,Genre7,3,0
+1088,BookTitle88,Author88,Genre8,2,1
+1089,BookTitle89,Author89,Genre9,1,2
+1090,BookTitle90,Author90,Genre0,5,0
+1091,BookTitle91,Author91,Genre1,4,1
+1092,BookTitle92,Author92,Genre2,3,2
+1093,BookTitle93,Author93,Genre3,2,0
+1094,BookTitle94,Author94,Genre4,1,1
+1095,BookTitle95,Author95,Genre5,5,2
+1096,BookTitle96,Author96,Genre6,4,0
+1097,BookTitle97,Author97,Genre7,3,1
+1098,BookTitle98,Author98,Genre8,2,2
+1099,BookTitle99,Author99,Genre9,1,0
+1100,BookTitle100,Author100,Genre0,5,1
+1101,BookTitle101,Author101,Genre1,4,2
+1102,BookTitle102,Author102,Genre2,3,0
+1103,BookTitle103,Author103,Genre3,2,1
+1104,BookTitle104,Author104,Genre4,1,2
+1105,BookTitle105,Author105,Genre5,5,0
+1106,BookTitle106,Author106,Genre6,4,1
+1107,BookTitle107,Author107,Genre7,3,2
+1108,BookTitle108,Author108,Genre8,2,0
+1109,BookTitle109,Author109,Genre9,1,1
+1110,BookTitle110,Author110,Genre0,5,2
+1111,BookTitle111,Author111,Genre1,4,0
+1112,BookTitle112,Author112,Genre2,3,1
+1113,BookTitle113,Author113,Genre3,2,2
+1114,BookTitle114,Author114,Genre4,1,0
+1115,BookTitle115,Author115,Genre5,5,1
+1116,BookTitle116,Author116,Genre6,4,2
+1117,BookTitle117,Author117,Genre7,3,0
+1118,BookTitle118,Author118,Genre8,2,1
+1119,BookTitle119,Author119,Genre9,1,2
+1120,BookTitle120,Author120,Genre0,5,0
+1121,BookTitle121,Author121,Genre1,4,1
+1122,BookTitle122,Author122,Genre2,3,2
+1123,BookTitle123,Author123,Genre3,2,0
+1124,BookTitle124,Author124,Genre4,1,1
+1125,BookTitle125,Author125,Genre5,5,2
+1126,BookTitle126,Author126,Genre6,4,0
+1127,BookTitle127,Author127,Genre7,3,1
+1128,BookTitle128,Author128,Genre8,2,2
+1129,BookTitle129,Author129,Genre9,1,0
+1130,BookTitle130,Author130,Genre0,5,1
+1131,BookTitle131,Author131,Genre1,4,2
+1132,BookTitle132,Author132,Genre2,3,0
+1133,BookTitle133,Author133,Genre3,2,1
+1134,BookTitle134,Author134,Genre4,1,2
+1135,BookTitle135,Author135,Genre5,5,0
+1136,BookTitle136,Author136,Genre6,4,1
+1137,BookTitle137,Author137,Genre7,3,2
+1138,BookTitle138,Author138,Genre8,2,0
+1139,BookTitle139,Author139,Genre9,1,1
+1140,BookTitle140,Author140,Genre0,5,2
+1141,BookTitle141,Author141,Genre1,4,0
+1142,BookTitle142,Author142,Genre2,3,1
+1143,BookTitle143,Author143,Genre3,2,2
+1144,BookTitle144,Author144,Genre4,1,0
+1145,BookTitle145,Author145,Genre5,5,1
+1146,BookTitle146,Author146,Genre6,4,2
+1147,BookTitle147,Author147,Genre7,3,0
+1148,BookTitle148,Author148,Genre8,2,1
+1149,BookTitle149,Author149,Genre9,1,2
+1150,BookTitle150,Author150,Genre0,5,0
+1151,BookTitle151,Author151,Genre1,4,1
+1152,BookTitle152,Author152,Genre2,3,2
+1153,BookTitle153,Author153,Genre3,2,0
+1154,BookTitle154,Author154,Genre4,1,1
+1155,BookTitle155,Author155,Genre5,5,2
+1156,BookTitle156,Author156,Genre6,4,0
+1157,BookTitle157,Author157,Genre7,3,1
+1158,BookTitle158,Author158,Genre8,2,2
+1159,BookTitle159,Author159,Genre9,1,0
+1160,BookTitle160,Author160,Genre0,5,1
+1161,BookTitle161,Author161,Genre1,4,2
+1162,BookTitle162,Author162,Genre2,3,0
+1163,BookTitle163,Author163,Genre3,2,1
+1164,BookTitle164,Author164,Genre4,1,2
+1165,BookTitle165,Author165,Genre5,5,0
+1166,BookTitle166,Author166,Genre6,4,1
+1167,BookTitle167,Author167,Genre7,3,2
+1168,BookTitle168,Author168,Genre8,2,0
+1169,BookTitle169,Author169,Genre9,1,1
+1170,BookTitle170,Author170,Genre0,5,2
+1171,BookTitle171,Author171,Genre1,4,0
+1172,BookTitle172,Author172,Genre2,3,1
+1173,BookTitle173,Author173,Genre3,2,2
+1174,BookTitle174,Author174,Genre4,1,0
+1175,BookTitle175,Author175,Genre5,5,1
+1176,BookTitle176,Author176,Genre6,4,2
+1177,BookTitle177,Author177,Genre7,3,0
+1178,BookTitle178,Author178,Genre8,2,1
+1179,BookTitle179,Author179,Genre9,1,2
+1180,BookTitle180,Author180,Genre0,5,0
+1181,BookTitle181,Author181,Genre1,4,1
+1182,BookTitle182,Author182,Genre2,3,2
+1183,BookTitle183,Author183,Genre3,2,0
+1184,BookTitle184,Author184,Genre4,1,1
+1185,BookTitle185,Author185,Genre5,5,2
+1186,BookTitle186,Author186,Genre6,4,0
+1187,BookTitle187,Author187,Genre7,3,1
+1188,BookTitle188,Author188,Genre8,2,2
+1189,BookTitle189,Author189,Genre9,1,0
+1190,BookTitle190,Author190,Genre0,5,1
+1191,BookTitle191,Author191,Genre1,4,2
+1192,BookTitle192,Author192,Genre2,3,0
+1193,BookTitle193,Author193,Genre3,2,1
+1194,BookTitle194,Author194,Genre4,1,2
+1195,BookTitle195,Author195,Genre5,5,0
+1196,BookTitle196,Author196,Genre6,4,1
+1197,BookTitle197,Author197,Genre7,3,2
+1198,BookTitle198,Author198,Genre8,2,0
+1199,BookTitle199,Author199,Genre9,1,1
+1200,BookTitle200,Author200,Genre0,5,2
+1201,BookTitle201,Author201,Genre1,4,0
+1202,BookTitle202,Author202,Genre2,3,1
+1203,BookTitle203,Author203,Genre3,2,2
+1204,BookTitle204,Author204,Genre4,1,0
+1205,BookTitle205,Author205,Genre5,5,1
+1206,BookTitle206,Author206,Genre6,4,2
+1207,BookTitle207,Author207,Genre7,3,0
+1208,BookTitle208,Author208,Genre8,2,1
+1209,BookTitle209,Author209,Genre9,1,2
+1210,BookTitle210,Author210,Genre0,5,0
+1211,BookTitle211,Author211,Genre1,4,1
+1212,BookTitle212,Author212,Genre2,3,2
+1213,BookTitle213,Author213,Genre3,2,0
+1214,BookTitle214,Author214,Genre4,1,1
+1215,BookTitle215,Author215,Genre5,5,2
+1216,BookTitle216,Author216,Genre6,4,0
+1217,BookTitle217,Author217,Genre7,3,1
+1218,BookTitle218,Author218,Genre8,2,2
+1219,BookTitle219,Author219,Genre9,1,0
+1220,BookTitle220,Author220,Genre0,5,1
+1221,BookTitle221,Author221,Genre1,4,2
+1222,BookTitle222,Author222,Genre2,3,0
+1223,BookTitle223,Author223,Genre3,2,1
+1224,BookTitle224,Author224,Genre4,1,2
+1225,BookTitle225,Author225,Genre5,5,0
+1226,BookTitle226,Author226,Genre6,4,1
+1227,BookTitle227,Author227,Genre7,3,2
+1228,BookTitle228,Author228,Genre8,2,0
+1229,BookTitle229,Author229,Genre9,1,1
+1230,BookTitle230,Author230,Genre0,5,2
+1231,BookTitle231,Author231,Genre1,4,0
+1232,BookTitle232,Author232,Genre2,3,1
+1233,BookTitle233,Author233,Genre3,2,2
+1234,BookTitle234,Author234,Genre4,1,0
+1235,BookTitle235,Author235,Genre5,5,1
+1236,BookTitle236,Author236,Genre6,4,2
+1237,BookTitle237,Author237,Genre7,3,0
+1238,BookTitle238,Author238,Genre8,2,1
+1239,BookTitle239,Author239,Genre9,1,2
+1240,BookTitle240,Author240,Genre0,5,0
+1241,BookTitle241,Author241,Genre1,4,1
+1242,BookTitle242,Author242,Genre2,3,2
+1243,BookTitle243,Author243,Genre3,2,0
+1244,BookTitle244,Author244,Genre4,1,1
+1245,BookTitle245,Author245,Genre5,5,2
+1246,BookTitle246,Author246,Genre6,4,0
+1247,BookTitle247,Author247,Genre7,3,1
+1248,BookTitle248,Author248,Genre8,2,2
+1249,BookTitle249,Author249,Genre9,1,0
+1250,BookTitle250,Author250,Genre0,5,1
+1251,BookTitle251,Author251,Genre1,4,2
+1252,BookTitle252,Author252,Genre2,3,0
+1253,BookTitle253,Author253,Genre3,2,1
+1254,BookTitle254,Author254,Genre4,1,2
+1255,BookTitle255,Author255,Genre5,5,0
+1256,BookTitle256,Author256,Genre6,4,1
+1257,BookTitle257,Author257,Genre7,3,2
+1258,BookTitle258,Author258,Genre8,2,0
+1259,BookTitle259,Author259,Genre9,1,1
+1260,BookTitle260,Author260,Genre0,5,2
+1261,BookTitle261,Author261,Genre1,4,0
+1262,BookTitle262,Author262,Genre2,3,1
+1263,BookTitle263,Author263,Genre3,2,2
+1264,BookTitle264,Author264,Genre4,1,0
+1265,BookTitle265,Author265,Genre5,5,1
+1266,BookTitle266,Author266,Genre6,4,2
+1267,BookTitle267,Author267,Genre7,3,0
+1268,BookTitle268,Author268,Genre8,2,1
+1269,BookTitle269,Author269,Genre9,1,2
+1270,BookTitle270,Author270,Genre0,5,0
+1271,BookTitle271,Author271,Genre1,4,1
+1272,BookTitle272,Author272,Genre2,3,2
+1273,BookTitle273,Author273,Genre3,2,0
+1274,BookTitle274,Author274,Genre4,1,1
+1275,BookTitle275,Author275,Genre5,5,2
+1276,BookTitle276,Author276,Genre6,4,0
+1277,BookTitle277,Author277,Genre7,3,1
+1278,BookTitle278,Author278,Genre8,2,2
+1279,BookTitle279,Author279,Genre9,1,0
+1280,BookTitle280,Author280,Genre0,5,1
+1281,BookTitle281,Author281,Genre1,4,2
+1282,BookTitle282,Author282,Genre2,3,0
+1283,BookTitle283,Author283,Genre3,2,1
+1284,BookTitle284,Author284,Genre4,1,2
+1285,BookTitle285,Author285,Genre5,5,0
+1286,BookTitle286,Author286,Genre6,4,1
+1287,BookTitle287,Author287,Genre7,3,2
+1288,BookTitle288,Author288,Genre8,2,0
+1289,BookTitle289,Author289,Genre9,1,1
+1290,BookTitle290,Author290,Genre0,5,2
+1291,BookTitle291,Author291,Genre1,4,0
+1292,BookTitle292,Author292,Genre2,3,1
+1293,BookTitle293,Author293,Genre3,2,2
+1294,BookTitle294,Author294,Genre4,1,0
+1295,BookTitle295,Author295,Genre5,5,1
+1296,BookTitle296,Author296,Genre6,4,2
+1297,BookTitle297,Author297,Genre7,3,0
+1298,BookTitle298,Author298,Genre8,2,1
+1299,BookTitle299,Author299,Genre9,1,2
+1300,BookTitle300,Author300,Genre0,5,0
+1301,BookTitle301,Author301,Genre1,4,1
+1302,BookTitle302,Author302,Genre2,3,2
+1303,BookTitle303,Author303,Genre3,2,0
+1304,BookTitle304,Author304,Genre4,1,1
+1305,BookTitle305,Author305,Genre5,5,2
+1306,BookTitle306,Author306,Genre6,4,0
+1307,BookTitle307,Author307,Genre7,3,1
+1308,BookTitle308,Author308,Genre8,2,2
+1309,BookTitle309,Author309,Genre9,1,0
+1310,BookTitle310,Author310,Genre0,5,1
+1311,BookTitle311,Author311,Genre1,4,2
+1312,BookTitle312,Author312,Genre2,3,0
+1313,BookTitle313,Author313,Genre3,2,1
+1314,BookTitle314,Author314,Genre4,1,2
+1315,BookTitle315,Author315,Genre5,5,0
+1316,BookTitle316,Author316,Genre6,4,1
+1317,BookTitle317,Author317,Genre7,3,2
+1318,BookTitle318,Author318,Genre8,2,0
+1319,BookTitle319,Author319,Genre9,1,1
+1320,BookTitle320,Author320,Genre0,5,2
+1321,BookTitle321,Author321,Genre1,4,0
+1322,BookTitle322,Author322,Genre2,3,1
+1323,BookTitle323,Author323,Genre3,2,2
+1324,BookTitle324,Author324,Genre4,1,0
+1325,BookTitle325,Author325,Genre5,5,1
+1326,BookTitle326,Author326,Genre6,4,2
+1327,BookTitle327,Author327,Genre7,3,0
+1328,BookTitle328,Author328,Genre8,2,1
+1329,BookTitle329,Author329,Genre9,1,2
+1330,BookTitle330,Author330,Genre0,5,0
+1331,BookTitle331,Author331,Genre1,4,1
+1332,BookTitle332,Author332,Genre2,3,2
+1333,BookTitle333,Author333,Genre3,2,0
+1334,BookTitle334,Author334,Genre4,1,1
+1335,BookTitle335,Author335,Genre5,5,2
+1336,BookTitle336,Author336,Genre6,4,0
+1337,BookTitle337,Author337,Genre7,3,1
+1338,BookTitle338,Author338,Genre8,2,2
+1339,BookTitle339,Author339,Genre9,1,0
+1340,BookTitle340,Author340,Genre0,5,1
+1341,BookTitle341,Author341,Genre1,4,2
+1342,BookTitle342,Author342,Genre2,3,0
+1343,BookTitle343,Author343,Genre3,2,1
+1344,BookTitle344,Author344,Genre4,1,2
+1345,BookTitle345,Author345,Genre5,5,0
+1346,BookTitle346,Author346,Genre6,4,1
+1347,BookTitle347,Author347,Genre7,3,2
+1348,BookTitle348,Author348,Genre8,2,0
+1349,BookTitle349,Author349,Genre9,1,1
+1350,BookTitle350,Author350,Genre0,5,2
+1351,BookTitle351,Author351,Genre1,4,0
+1352,BookTitle352,Author352,Genre2,3,1
+1353,BookTitle353,Author353,Genre3,2,2
+1354,BookTitle354,Author354,Genre4,1,0
+1355,BookTitle355,Author355,Genre5,5,1
+1356,BookTitle356,Author356,Genre6,4,2
+1357,BookTitle357,Author357,Genre7,3,0
+1358,BookTitle358,Author358,Genre8,2,1
+1359,BookTitle359,Author359,Genre9,1,2
+1360,BookTitle360,Author360,Genre0,5,0
+1361,BookTitle361,Author361,Genre1,4,1
+1362,BookTitle362,Author362,Genre2,3,2
+1363,BookTitle363,Author363,Genre3,2,0
+1364,BookTitle364,Author364,Genre4,1,1
+1365,BookTitle365,Author365,Genre5,5,2
+1366,BookTitle366,Author366,Genre6,4,0
+1367,BookTitle367,Author367,Genre7,3,1
+1368,BookTitle368,Author368,Genre8,2,2
+1369,BookTitle369,Author369,Genre9,1,0
+1370,BookTitle370,Author370,Genre0,5,1
+1371,BookTitle371,Author371,Genre1,4,2
+1372,BookTitle372,Author372,Genre2,3,0
+1373,BookTitle373,Author373,Genre3,2,1
+1374,BookTitle374,Author374,Genre4,1,2
+1375,BookTitle375,Author375,Genre5,5,0
+1376,BookTitle376,Author376,Genre6,4,1
+1377,BookTitle377,Author377,Genre7,3,2
+1378,BookTitle378,Author378,Genre8,2,0
+1379,BookTitle379,Author379,Genre9,1,1
+1380,BookTitle380,Author380,Genre0,5,2
+1381,BookTitle381,Author381,Genre1,4,0
+1382,BookTitle382,Author382,Genre2,3,1
+1383,BookTitle383,Author383,Genre3,2,2
+1384,BookTitle384,Author384,Genre4,1,0
+1385,BookTitle385,Author385,Genre5,5,1
+1386,BookTitle386,Author386,Genre6,4,2
+1387,BookTitle387,Author387,Genre7,3,0
+1388,BookTitle388,Author388,Genre8,2,1
+1389,BookTitle389,Author389,Genre9,1,2
+1390,BookTitle390,Author390,Genre0,5,0
+1391,BookTitle391,Author391,Genre1,4,1
+1392,BookTitle392,Author392,Genre2,3,2
+1393,BookTitle393,Author393,Genre3,2,0
+1394,BookTitle394,Author394,Genre4,1,1
+1395,BookTitle395,Author395,Genre5,5,2
+1396,BookTitle396,Author396,Genre6,4,0
+1397,BookTitle397,Author397,Genre7,3,1
+1398,BookTitle398,Author398,Genre8,2,2
+1399,BookTitle399,Author399,Genre9,1,0
+1400,BookTitle400,Author400,Genre0,5,1
+1401,BookTitle401,Author401,Genre1,4,2
+1402,BookTitle402,Author402,Genre2,3,0
+1403,BookTitle403,Author403,Genre3,2,1
+1404,BookTitle404,Author404,Genre4,1,2
+1405,BookTitle405,Author405,Genre5,5,0
+1406,BookTitle406,Author406,Genre6,4,1
+1407,BookTitle407,Author407,Genre7,3,2
+1408,BookTitle408,Author408,Genre8,2,0
+1409,BookTitle409,Author409,Genre9,1,1
+1410,BookTitle410,Author410,Genre0,5,2
+1411,BookTitle411,Author411,Genre1,4,0
+1412,BookTitle412,Author412,Genre2,3,1
+1413,BookTitle413,Author413,Genre3,2,2
+1414,BookTitle414,Author414,Genre4,1,0
+1415,BookTitle415,Author415,Genre5,5,1
+1416,BookTitle416,Author416,Genre6,4,2
+1417,BookTitle417,Author417,Genre7,3,0
+1418,BookTitle418,Author418,Genre8,2,1
+1419,BookTitle419,Author419,Genre9,1,2
+1420,BookTitle420,Author420,Genre0,5,0
+1421,BookTitle421,Author421,Genre1,4,1
+1422,BookTitle422,Author422,Genre2,3,2
+1423,BookTitle423,Author423,Genre3,2,0
+1424,BookTitle424,Author424,Genre4,1,1
+1425,BookTitle425,Author425,Genre5,5,2
+1426,BookTitle426,Author426,Genre6,4,0
+1427,BookTitle427,Author427,Genre7,3,1
+1428,BookTitle428,Author428,Genre8,2,2
+1429,BookTitle429,Author429,Genre9,1,0
+1430,BookTitle430,Author430,Genre0,5,1
+1431,BookTitle431,Author431,Genre1,4,2
+1432,BookTitle432,Author432,Genre2,3,0
+1433,BookTitle433,Author433,Genre3,2,1
+1434,BookTitle434,Author434,Genre4,1,2
+1435,BookTitle435,Author435,Genre5,5,0
+1436,BookTitle436,Author436,Genre6,4,1
+1437,BookTitle437,Author437,Genre7,3,2
+1438,BookTitle438,Author438,Genre8,2,0
+1439,BookTitle439,Author439,Genre9,1,1
+1440,BookTitle440,Author440,Genre0,5,2
+1441,BookTitle441,Author441,Genre1,4,0
+1442,BookTitle442,Author442,Genre2,3,1
+1443,BookTitle443,Author443,Genre3,2,2
+1444,BookTitle444,Author444,Genre4,1,0
+1445,BookTitle445,Author445,Genre5,5,1
+1446,BookTitle446,Author446,Genre6,4,2
+1447,BookTitle447,Author447,Genre7,3,0
+1448,BookTitle448,Author448,Genre8,2,1
+1449,BookTitle449,Author449,Genre9,1,2
+1450,BookTitle450,Author450,Genre0,5,0
+1451,BookTitle451,Author451,Genre1,4,1
+1452,BookTitle452,Author452,Genre2,3,2
+1453,BookTitle453,Author453,Genre3,2,0
+1454,BookTitle454,Author454,Genre4,1,1
+1455,BookTitle455,Author455,Genre5,5,2
+1456,BookTitle456,Author456,Genre6,4,0
+1457,BookTitle457,Author457,Genre7,3,1
+1458,BookTitle458,Author458,Genre8,2,2
+1459,BookTitle459,Author459,Genre9,1,0
+1460,BookTitle460,Author460,Genre0,5,1
+1461,BookTitle461,Author461,Genre1,4,2
+1462,BookTitle462,Author462,Genre2,3,0
+1463,BookTitle463,Author463,Genre3,2,1
+1464,BookTitle464,Author464,Genre4,1,2
+1465,BookTitle465,Author465,Genre5,5,0
+1466,BookTitle466,Author466,Genre6,4,1
+1467,BookTitle467,Author467,Genre7,3,2
+1468,BookTitle468,Author468,Genre8,2,0
+1469,BookTitle469,Author469,Genre9,1,1
+1470,BookTitle470,Author470,Genre0,5,2
+1471,BookTitle471,Author471,Genre1,4,0
+1472,BookTitle472,Author472,Genre2,3,1
+1473,BookTitle473,Author473,Genre3,2,2
+1474,BookTitle474,Author474,Genre4,1,0
+1475,BookTitle475,Author475,Genre5,5,1
+1476,BookTitle476,Author476,Genre6,4,2
+1477,BookTitle477,Author477,Genre7,3,0
+1478,BookTitle478,Author478,Genre8,2,1
+1479,BookTitle479,Author479,Genre9,1,2
+1480,BookTitle480,Author480,Genre0,5,0
+1481,BookTitle481,Author481,Genre1,4,1
+1482,BookTitle482,Author482,Genre2,3,2
+1483,BookTitle483,Author483,Genre3,2,0
+1484,BookTitle484,Author484,Genre4,1,1
+1485,BookTitle485,Author485,Genre5,5,2
+1486,BookTitle486,Author486,Genre6,4,0
+1487,BookTitle487,Author487,Genre7,3,1
+1488,BookTitle488,Author488,Genre8,2,2
+1489,BookTitle489,Author489,Genre9,1,0
+1490,BookTitle490,Author490,Genre0,5,1
+1491,BookTitle491,Author491,Genre1,4,2
+1492,BookTitle492,Author492,Genre2,3,0
+1493,BookTitle493,Author493,Genre3,2,1
+1494,BookTitle494,Author494,Genre4,1,2
+1495,BookTitle495,Author495,Genre5,5,0
+1496,BookTitle496,Author496,Genre6,4,1
+1497,BookTitle497,Author497,Genre7,3,2
+1498,BookTitle498,Author498,Genre8,2,0
+1499,BookTitle499,Author499,Genre9,1,1
