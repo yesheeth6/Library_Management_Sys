@@ -59,6 +59,9 @@ Before running the project, ensure the following software and dependencies are i
 3. Compile the program using the following command:
    ```bash
    g++ -o library_system lib_m_sys.cpp -lsqlite3
+![image](https://github.com/user-attachments/assets/49f1785b-e408-4522-8983-d32df8e884d9)
+![image](https://github.com/user-attachments/assets/863a4fd5-6907-4e17-842f-1a8e16e26d1f)
+
 ## Execute the compiled program:
 ./library_system
 ## Project Directory Structure
